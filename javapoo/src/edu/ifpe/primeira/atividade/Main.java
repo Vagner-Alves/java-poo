@@ -11,6 +11,13 @@ public class Main {
 		System.out.println("Saldo da Primeira Conta: " + primeiraConta.saldo);
 		System.out.println("Saldo da Segunda Conta: " + segundaConta.saldo);
 		
+		System.out.println("-----------------------------------------------");
+		
+		Pessoa pessoa = new Pessoa("Vagner Alves","05/01/1997","xxx.yyy.zzz.-ww");
+		
+		pessoa.acordar();
+		pessoa.comer();
+		pessoa.dormir();
 		
 
 	}
