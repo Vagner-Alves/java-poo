@@ -9,7 +9,6 @@ public class LacoRepeticao {
 		int contador = 0;
 		int somaNumeros = 0;
 		
-		
 		Scanner teclado = new Scanner(System.in);
 		
 		do {
