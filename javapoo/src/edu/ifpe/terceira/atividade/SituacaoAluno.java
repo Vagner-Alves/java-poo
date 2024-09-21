@@ -8,7 +8,7 @@ public class SituacaoAluno {
 		// TODO Auto-generated method stub
 		Scanner teclado  = new Scanner(System.in);
 		System.out.println("Informe o Nome do Aluno: ");
-		String nomeAluno = teclado.nextLine();
+		//String nomeAluno = teclado.nextLine();
 		
 		
 		System.out.println("Informe a primeira Nota: ");
