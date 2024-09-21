@@ -9,6 +9,7 @@ public class CaixaMercado {
 		
 		Scanner teclado = new Scanner(System.in);
 		int condicao = 1;
+		double quantidadeItens = 0;
 		
 		String produtos = "código " + " produto " + "\n " + "1      0,50"
 		+ "\n " + "2      1,00" + "\n " + "3      4,00"  + "\n " + "5      7,00" + "\n " + "9      8,00";
@@ -22,9 +23,14 @@ public class CaixaMercado {
 			 if (escolhaUsuario == 0) {
 				 break;
 			 }
+			 
+			 else if (escolhaUsuario == 1) {
+				 
+			 }
 		}
 		
 		System.out.println("Laço parado");
+		teclado.close();
 
 	}
 
