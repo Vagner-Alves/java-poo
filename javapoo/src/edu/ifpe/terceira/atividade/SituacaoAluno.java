@@ -29,6 +29,7 @@ public class SituacaoAluno {
 		else if (mediadasNotas >=4 && mediadasNotas < 7){
 			System.out.println("Prova Final");
 		}
+		teclado.close();
 
 	}
 
