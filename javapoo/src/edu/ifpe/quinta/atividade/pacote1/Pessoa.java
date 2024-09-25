@@ -5,21 +5,21 @@ public class Pessoa {
 	private int anoNascimento;
 	private double altura;
 	
-	private Pessoa() {}
+	public Pessoa() {}
 	
-	private Pessoa (String nome, int anoNascimento, double altura) {
+	public Pessoa (String nome, int anoNascimento, double altura) {
 		this.nome = nome;
 		this.anoNascimento = anoNascimento;
 		this.altura = altura;
 	}
 	
-	private void imprimirDados(){
+	public void imprimirDados(){
 		System.out.println("Nome: " + this.nome);
 		System.out.println("Ano de nascimento: " + this.anoNascimento);
 		System.out.println("Altura: " + this.altura);
 	}
 	
-	private void calcularIdade() {
+	public void calcularIdade() {
 		System.out.println("Nome:  " + this.nome);
 		System.out.println("Idade: " + (2024 - this.anoNascimento));
 	}
