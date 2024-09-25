@@ -1,6 +1,6 @@
 package edu.ifpe.quinta.atividade;
 
-public class Conta {
+ class Conta {
 	public String titular;
 	String numeroConta;
 	private double saldoConta;

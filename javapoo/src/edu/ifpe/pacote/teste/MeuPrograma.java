@@ -7,7 +7,7 @@ public class MeuPrograma {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
-		Conta conta = new Conta(); // é possivel pois as classes estão no mesmo pacote
+		Conta conta = new Conta(); // não é possível, pois a classe conta é default e a classe MeuPrograma está em um pacote diferente.
 		
 		System.out.println(conta);
 	//	conta.creditar();                              // esse método não é visivel , pois está privado
