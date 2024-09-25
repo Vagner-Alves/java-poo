@@ -19,9 +19,8 @@ public class Pessoa {
 		System.out.println("Altura: " + this.altura);
 	}
 	
-	public void calcularIdade() {
-		System.out.println("Nome:  " + this.nome);
-		System.out.println("Idade: " + (2024 - this.anoNascimento));
+	public int calcularIdade() {
+		return 2024 - this.anoNascimento;
 	}
 
 	public String getNome() {

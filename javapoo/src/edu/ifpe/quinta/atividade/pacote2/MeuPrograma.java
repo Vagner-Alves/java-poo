@@ -19,6 +19,7 @@ public class MeuPrograma {
 		Pessoa primeiraPessoa = new Pessoa("Ricson",1982,1.77);
 		Pessoa segundaPessoa = new Pessoa("Vagner", 1997, 1.65);
 		
+		System.out.println("Exibindo o maior");
 		if(primeiraPessoa.getAltura() > segundaPessoa.getAltura()) {
 			primeiraPessoa.imprimirDados();
 		}
@@ -27,7 +28,16 @@ public class MeuPrograma {
 			segundaPessoa.imprimirDados();
 		}
 		
+		System.out.println("  ");
+		System.out.println("Calculando Idade e Exibindo o Mais Velho");
 		
+		if(primeiraPessoa.calcularIdade() > segundaPessoa.calcularIdade()) {
+			primeiraPessoa.imprimirDados();
+		}
+		
+		else{
+			segundaPessoa.imprimirDados();
+		}
 		
 	}
 
