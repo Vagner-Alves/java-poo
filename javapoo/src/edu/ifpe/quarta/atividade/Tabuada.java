@@ -11,10 +11,16 @@ public class Tabuada {
 		System.out.println("DIGITE UM NÚMERO PARA VER SUA TABUADA: ");
 		int numeroTabuada = teclado.nextInt();
 		
-		for(int inicio = 1; inicio <= 10; inicio ++) {
-			System.out.println(inicio + " x " + numeroTabuada + " = " + inicio * numeroTabuada);
+		if(numeroTabuada < 1 || numeroTabuada > 10) {
+			System.out.println("número inválido");
 		}
-
+		
+		else {
+			for(int inicio = 1; inicio <= 10; inicio ++) {
+				System.out.println(inicio + " x " + numeroTabuada + " = " + inicio * numeroTabuada);
+			}
+		}
+		
 	}
 
 }
