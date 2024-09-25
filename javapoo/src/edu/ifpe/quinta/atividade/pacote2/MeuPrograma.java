@@ -16,8 +16,9 @@ public class MeuPrograma {
 		String nome = conta.titular;		         // este campo está público portanto é visivel
 		String numeroConta = conta.numeroConta;      // esse campo está default,portanto é visivel para classes dentro do mesmo pacote
 		
-		Pessoa primeiraPessoa = new Pessoa("Ricson",1982,1.77);
-		Pessoa segundaPessoa = new Pessoa("Vagner", 1997, 1.65);
+		
+		Pessoa primeiraPessoa =   new Pessoa("Ricson",1982,1.77);
+		Pessoa segundaPessoa  =    new Pessoa("Vagner", 1997, 1.65);
 		
 		System.out.println("Exibindo o maior");
 		if(primeiraPessoa.getAltura() > segundaPessoa.getAltura()) {
