@@ -1,6 +1,6 @@
-package edu.ifpe.pacote.teste;
+package edu.ifpe.quinta.atividade.pacote1;
 
-import edu.ifpe.quinta.atividade.Conta;
+import edu.ifpe.quinta.atividade.pacote2.Conta;
 
 public class MeuPrograma {
 

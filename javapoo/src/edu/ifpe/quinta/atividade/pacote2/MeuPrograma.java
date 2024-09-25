@@ -1,4 +1,4 @@
-package edu.ifpe.quinta.atividade;
+package edu.ifpe.quinta.atividade.pacote2;
 
 public class MeuPrograma {
 
