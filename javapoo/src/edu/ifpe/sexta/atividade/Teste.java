@@ -12,6 +12,10 @@ public class Teste {
 		primeiraConta.depositar(100);
 		primeiraConta.calcularNovoSaldo(4.35);
 		
+		segundaConta.sacar(1801);
+		segundaConta.sacar(100);
+		segundaConta.depositar(2000);
+		segundaConta.calcularNovoSaldo(4.35);
 	}
 
 }

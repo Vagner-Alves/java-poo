@@ -54,8 +54,8 @@ public class ContaBancaria {
 	}
 	
 	public void calcularNovoSaldo(double percentualRendimento) {
-		double rendimento = saldo *= ( percentualRendimento / 100 );
-		saldo += rendimento;
+		double rendimento = saldo * ( percentualRendimento / 100 );
+		saldo = saldo + rendimento;
 		System.out.println("O valor dos rendimentos R$: " + rendimento);
 		System.out.println("O valor total do Saldo R$: " + saldo);
 	}
