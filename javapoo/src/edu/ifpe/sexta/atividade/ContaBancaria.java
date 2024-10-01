@@ -35,7 +35,7 @@ public class ContaBancaria {
 		this.saldo = saldo;
 	}
 	
-	public double sacar(double valor) {
+	public void sacar(double valor) {
 		if ( valor > saldo) {
 			System.out.println("Saldo Insuficiente!!!");
 		}
@@ -45,6 +45,18 @@ public class ContaBancaria {
 			System.out.println("Valor do Saque: R$ " + valor );
 			saldo = saldo - valor;
 		}
-		return 1.0;
+		
+	}
+	
+	public void depositar(double valor) {
+		saldo += valor;
+		System.out.println("O valor da conta R$: " + saldo);
+	}
+	
+	public void calcularNovoSaldo(double percentualRendimento) {
+		double rendimento = saldo *= ( percentualRendimento / 100 );
+		saldo += rendimento;
+		System.out.println("O valor dos rendimentos R$: " + rendimento);
+		System.out.println("O valor total do Saldo R$: " + saldo);
 	}
 }
