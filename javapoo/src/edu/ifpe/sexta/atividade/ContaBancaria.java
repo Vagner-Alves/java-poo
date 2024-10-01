@@ -39,6 +39,12 @@ public class ContaBancaria {
 		if ( valor > saldo) {
 			System.out.println("Saldo Insuficiente!!!");
 		}
+		
+		else {
+			
+			System.out.println("Valor do Saque: R$ " + valor );
+			saldo = saldo - valor;
+		}
 		return 1.0;
 	}
 }
