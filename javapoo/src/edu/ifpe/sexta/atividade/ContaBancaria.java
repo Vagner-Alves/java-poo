@@ -10,6 +10,35 @@ public class ContaBancaria {
 		this.numConta = numConta;
 		this.saldo = saldo;
 	}
+
+	public String getNomeCliente() {
+		return nomeCliente;
+	}
+
+	public void setNomeCliente(String nomeCliente) {
+		this.nomeCliente = nomeCliente;
+	}
+
+	public int getNumConta() {
+		return numConta;
+	}
+
+	public void setNumConta(int numConta) {
+		this.numConta = numConta;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 	
-	
+	public double sacar(double valor) {
+		if ( valor > saldo) {
+			System.out.println("Saldo Insuficiente!!!");
+		}
+		return 1.0;
+	}
 }
