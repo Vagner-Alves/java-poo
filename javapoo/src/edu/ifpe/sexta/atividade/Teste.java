@@ -11,11 +11,15 @@ public class Teste {
 		primeiraConta.sacar(100);
 		primeiraConta.depositar(100);
 		primeiraConta.calcularNovoSaldo(4.35);
-		
+		System.out.println(" ");
 		segundaConta.sacar(1801);
 		segundaConta.sacar(100);
 		segundaConta.depositar(2000);
 		segundaConta.calcularNovoSaldo(4.35);
+		System.out.println(" ");
+		primeiraConta.exibirDados();
+		System.out.println(" ");
+		segundaConta.exibirDados();
 	}
 
 }

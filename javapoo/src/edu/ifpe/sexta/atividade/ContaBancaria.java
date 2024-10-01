@@ -35,6 +35,12 @@ public class ContaBancaria {
 		this.saldo = saldo;
 	}
 	
+	public void exibirDados() {
+		System.out.println("Nome: " + nomeCliente);
+		System.out.println("Numero da Conta: " + numConta);
+		System.out.println("Saldo da Conta: " + saldo);
+	}
+	
 	public void sacar(double valor) {
 		if ( valor > saldo) {
 			System.out.println("Saldo Insuficiente!!!");
