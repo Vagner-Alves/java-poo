@@ -33,12 +33,7 @@ public class TesteVetor {
 		
 		
 		for( Pessoa lista: listadePessoas) {
-			System.out.println("insira as informações de uma Pessoa (nome, cpf, data de nascimento e altura");
-			String nome = teclado.nextLine();
-			final String cpf = teclado.nextLine();
-			String dataNascimento = teclado.nextLine();
-			double altura = teclado.nextDouble();
-			
+			lista.imprimirDados();
 			
 		}
 		
