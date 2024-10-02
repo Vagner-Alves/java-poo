@@ -21,16 +21,13 @@ public class TesteVetor {
 		
 		System.out.println(" ");
 		
-		Pessoa[] listadePessoas = new Pessoa[3];
+		//Pessoa[] listadePessoas = new Pessoa[3];
 		
-		Pessoa primeiraPessoa = new Pessoa();
-		Pessoa segundaPessoa = new Pessoa();
-		Pessoa terceiraPessoa = new Pessoa();
+		Pessoa primeiraPessoa = new Pessoa("vagner alves","xxx.xxx.xxx-xx","05/01/1997", 1.65);
+		Pessoa segundaPessoa = new Pessoa("fulano de tal", "xxx.xxx.xxx-yy","08/04/1996", 1.70);
+		Pessoa terceiraPessoa = new Pessoa("moça aleatória", "yyy.yyy.yyy-xx","08/18/2004", 1.63);
 		
-		
-		listadePessoas[0] = primeiraPessoa;
-		listadePessoas[1] = segundaPessoa;
-		
+		Pessoa[] listadePessoas = {primeiraPessoa, segundaPessoa, terceiraPessoa};
 		
 		for( Pessoa lista: listadePessoas) {
 			lista.imprimirDados();
