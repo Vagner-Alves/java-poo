@@ -11,7 +11,7 @@ public class ContatoMenu {
 		Scanner teclado = new Scanner(System.in);
 		
 		String menuOpcoes = "\n AGENDA DE CONTATOS " + "\n" + "1 adicionar" 
-				+ "\n" + "2 consultar" + "\n" +  "3 alterar" + "\n" + "4 excluir";
+				+ "\n" + "2 consultar" + "\n" +  "3 alterar" + "\n" + "4 excluir" + "\n" + "5 sair";
 
 		while(true) {
 			System.out.println(menuOpcoes);
@@ -49,6 +49,11 @@ public class ContatoMenu {
 				nome  = teclado.nextLine();
 				agendaContatos.excluirContato(nome);
 				break;
+			
+			case 5:
+				System.out.println("saindo da lista de contatos: ");
+				teclado.close();
+				return;
 				
 			default:
 				System.out.println("não existe a opção de número: " + opcao);
