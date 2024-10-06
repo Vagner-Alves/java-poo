@@ -2,11 +2,12 @@ package edu.ifpe.setima.atividade;
 
 public class Pessoa {
 	private String nome;
-	private String cpf;
+	final private String cpf;
 	private String dataNascimento;
 	private double altura;
 	
-	public Pessoa() {}
+	public Pessoa() {
+		this.cpf = "";}
 	
 	public Pessoa(String nome, String cpf, String dataNascimento, double altura) {
 		super();
