@@ -27,7 +27,8 @@ public class Contato {
 		this.telefone = telefone;
 	}
 	
-	public void adicionar(String valor) {
+	public void adicionar(String nome, String telefone) {
+		
 		
 	}
 	
