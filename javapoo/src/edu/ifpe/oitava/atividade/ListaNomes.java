@@ -9,10 +9,13 @@ public class ListaNomes {
 		
 		ArrayList<String> listadeNomes = new ArrayList<String>();
 		
-		listadeNomes.add("vagner alves");
-		listadeNomes.add("Segunda Pessoa");
+		listadeNomes.add("João");
+		listadeNomes.add("Maria");
+		listadeNomes.add("josé");
 		
 		System.out.println(listadeNomes);
-		}
+		
+		
+	}
 
 }
