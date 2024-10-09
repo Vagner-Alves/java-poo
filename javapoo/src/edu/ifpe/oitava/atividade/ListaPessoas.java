@@ -11,22 +11,19 @@ public class ListaPessoas {
 		ArrayList<Pessoa> listadePessoas = new ArrayList<Pessoa>();
 		Scanner entradaUsuario = new Scanner(System.in);
 
-		System.out.println("informe o nome do da pessoa: ");
-		String nome = entradaUsuario.nextLine();
-		System.out.println("informe o cpf : ");
-		String cpf = entradaUsuario.nextLine();
-		System.out.println("informe a data de nascimento: ");
-		String dataNascimento = entradaUsuario.nextLine();
-		System.out.println("informe a altura: ");
-		double altura = entradaUsuario.nextDouble();
+		for(int inicializador = 0; inicializador <  3; inicializador ++) {
+			System.out.println("informe o nome do da pessoa: ");
+			String nome = entradaUsuario.nextLine();
+			System.out.println("informe o cpf : ");
+			String cpf = entradaUsuario.nextLine();
+			System.out.println("informe a data de nascimento: ");
+			String dataNascimento = entradaUsuario.nextLine();
+			System.out.println("informe a altura: ");
+			double altura = entradaUsuario.nextDouble();
+			Pessoa pessoa = new Pessoa(nome, cpf,dataNascimento, altura);
+		}
 
-		Pessoa pessoa = new Pessoa(nome, cpf,dataNascimento, altura);
 
-		
-
-		for(int inicializador = 0; inicializador <  3; inicializador ++) {}
-
-		
 	}
 
 }
