@@ -22,11 +22,11 @@ public class ListaPessoas {
 
 		Pessoa pessoa = new Pessoa(nome, cpf,dataNascimento, altura);
 
-		String opcao = entradaUsuario.nextLine();
+		
 
+		for(int inicializador = 0; inicializador <  3; inicializador ++) {}
 
-
-
+		
 	}
 
 }
