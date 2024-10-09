@@ -17,7 +17,7 @@ public class MeuPrograma {
 		String nome = conta.titular;		         // este campo está público portanto é visivel
 		String numeroConta = conta.numeroConta;      // esse campo está default,portanto é visivel para classes dentro do mesmo pacote
 		
-
+		
 	}
 
 }
