@@ -6,6 +6,9 @@ public class Pessoa {
 	private String dataNascimento;
 	private double altura;
 	
+	public Pessoa() {
+		this.cpf = "";}
+	
 	public Pessoa(String nome ,String cpf, String dataNascimento, double altura) {
 		super();
 		this.nome = nome;
