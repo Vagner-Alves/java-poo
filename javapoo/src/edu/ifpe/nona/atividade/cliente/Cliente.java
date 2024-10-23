@@ -1,4 +1,4 @@
-package edu.ifpe.nona.atividade;
+package edu.ifpe.nona.atividade.cliente;
 
 public class Cliente {
 	private String nome;
