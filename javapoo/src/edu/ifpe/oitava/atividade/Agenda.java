@@ -12,13 +12,11 @@ public class Agenda {
 		contatos = new ArrayList<>();
 	}
 
-
 	public void adicionarContato(String nome, String telefone) {
 		Contato contato = new Contato(nome, telefone);
 		contatos.add(contato);
 		System.out.println("Contato " + nome + " adicionado!");
 	}
-
 
 	public Contato consultarContato(String nome) {
 		for (Contato contato : contatos) {
@@ -28,7 +26,6 @@ public class Agenda {
 		}
 		return null;
 	}
-
 
 	public void alterarContato(String nome, String novoTelefone) {
 		Contato contato = consultarContato(nome);

@@ -10,10 +10,10 @@ public class AgendaMenu {
 		// TODO Auto-generated method stub
 		Agenda agendaContatos = new Agenda();
 		Scanner teclado = new Scanner(System.in);
-		
+
 		String menuOpcoes = "\n AGENDA DE CONTATOS " + "\n" + "1 adicionar contato" 
 				+ "\n" + "2 consultar" + "\n" +  "3 alterar contato" + "\n" + "4 excluir contato" + "\n" + "5 sair";
-		
+
 		while(true) {
 			System.out.println(menuOpcoes);
 
@@ -44,18 +44,18 @@ public class AgendaMenu {
 				String novoNumero = teclado.nextLine();
 				agendaContatos.alterarContato(nome, novoNumero);
 				break;
-			
+
 			case 4:
 				System.out.println("informe o nome do contato que deseja excluir: ");
 				nome  = teclado.nextLine();
 				agendaContatos.excluirContato(nome);
 				break;
-			
+
 			case 5:
 				System.out.println("saindo da lista de contatos: ");
 				teclado.close();
 				return;
-				
+
 			default:
 				System.out.println("não existe a opção de número: " + opcao);
 			}
