@@ -23,6 +23,18 @@ public class ArraylistLoop {
 		for(String items: comprasMercado) {
 			System.out.println(items);
 		}
+		
+		ArrayList<Integer> valorItems = new ArrayList<Integer>();
+		valorItems.add(1);
+		valorItems.add(8);
+		valorItems.add(12);
+		valorItems.add(9);
+		valorItems.add(6);
+		// Utilizando FOR EACH com outros tipos primitivos
+		for(int item: valorItems) {
+			System.out.println(item);
+		}
+		
 
 	}
 }
