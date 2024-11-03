@@ -30,6 +30,7 @@ public class ArraylistLoop {
 		valorItems.add(12);
 		valorItems.add(9);
 		valorItems.add(6);
+		
 		// Utilizando FOR EACH com outros tipos primitivos
 		for(int item: valorItems) {
 			System.out.println(item);
