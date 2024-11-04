@@ -18,6 +18,7 @@ public class Poupanca extends Conta{
 	
 	void renderJuros() {
 		double saldo = this.getSaldo();
+		this.creditar( saldo * juros);
 		 
 	}
 	public double getJuros() {
@@ -29,8 +30,8 @@ public class Poupanca extends Conta{
 	public Cliente getCliente() {
 		return cliente;
 	}
-	public void setCliente() {
-		this.cliente = cliente;
+	public void setCliente(Cliente c) {
+		this.cliente = c;
 	}
 
 }
