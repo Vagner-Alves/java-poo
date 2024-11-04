@@ -1,20 +1,22 @@
 package edu.ifpe.estudos.heranca;
 
-public class Poupanca {
+public class Poupanca extends Conta{
 	private double juros;
 	
-	public Poupanca() {}
-	
 	public Poupanca(String n, double s, double j) {
-		numero = n; saldo = s; juros=j;
+		super(n,s);
+		this.juros=j;
 	}
 	
 	void creditar(double valor) {
+		double saldo = this.getSaldo();
 		saldo = saldo + valor;
+		
 	}
 	
 	void renderJuros() {
-		creditar(saldo * juros);
+		double saldo = this.getSaldo();
+		 
 	}
 
 }
