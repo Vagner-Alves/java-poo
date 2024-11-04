@@ -1,8 +1,6 @@
 package edu.ifpe.estudos.heranca;
 
 public class Poupanca {
-	private String numero;
-	private double saldo;
 	private double juros;
 	
 	public Poupanca() {}
