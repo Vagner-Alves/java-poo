@@ -10,6 +10,9 @@ public class Poupanca extends Conta{
 		this.juros = juros;
 	}
 	
+	public void renderJuros(double valor) {
+		
+	}
 	public double getJuros() {
 		return juros;
 	}

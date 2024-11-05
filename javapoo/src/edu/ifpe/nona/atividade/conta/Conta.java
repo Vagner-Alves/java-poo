@@ -26,7 +26,10 @@ public class Conta {
 		this.saldo = novoSaldo;
 	}
 	
-	public void transferir(double valor) {}
+	public void transferir(Conta contaDestino,double valor) {
+		this.saldo = saldo - valor;
+		contaDestino.depositar(valor);
+	}
 	
 	public String getNumero() {
 		return numero;
