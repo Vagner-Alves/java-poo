@@ -33,14 +33,16 @@ public class ListaContas {
 		} return null;
 	}
 	
-	public void fazerDeposito(String nome) {
+	public void fazerDeposito(String nome, double valor) {
 		Conta conta = consultarConta(nome);
-		
+		conta.depositar(valor);
 		
 	}
 	
-	public void fazerTransferencia(String nome) {
+	public void fazerTransferencia(String nome, String contaDestino, double valor) {
 		Conta conta = consultarConta(nome);
+		Conta destino = consultarConta(contaDestino);
+		conta.transferir(destino, valor);
 	}
 
 }
