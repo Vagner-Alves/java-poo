@@ -3,6 +3,7 @@ package edu.ifpe.nona.atividade.principal;
 import java.util.Scanner;
 
 import edu.ifpe.nona.atividade.conta.ListaContas;
+import edu.ifpe.nona.atividade.conta.Poupanca;
 
 public class Menu {
 
@@ -32,13 +33,56 @@ public class Menu {
 				String cpf = teclado.nextLine();
 				contas.adicionarCliente(nome, cpf);
 				//contas.consultarConta("vagner alves");
+				
 			case 2:
 				System.out.println("informe o número da conta: ");
 				String numeroConta = teclado.nextLine();
 				System.out.println("informe o saldo da conta: ");
 				double saldoConta = teclado.nextDouble();
 				contas.adicionarConta(numeroConta, saldoConta, null);
+				
+			
+			case 3:
+				System.out.println("informe o número da conta (poupanca): ");
+				String numeroContaPoupanca = teclado.nextLine();
+				System.out.println("informe o saldo da conta (poupanca): ");
+				double saldoContaPoupanca = teclado.nextDouble();
+				contas.adicionarContaPoupanca(numeroContaPoupanca, saldoContaPoupanca, null,0);
+				
+			
+			case 4:
+				System.out.println("informe o valor a ser depositado: ");
+				double valor = teclado.nextDouble();
+				System.out.println("informa o titular da conta (nome): ");
+				String nomeTitular = teclado.nextLine();
+				contas.fazerDeposito(nomeTitular, valor);
+				
+			
+			case 5:
+				System.out.println("informe o titular da conta (nome): ");
+				String consulta = teclado.nextLine();
+				contas.consultarConta(consulta);
+			
+			case 6:
+				System.out.println("informe o valor a ser transferido: ");
+				double valorTransferencia = teclado.nextDouble();
+				System.out.println("informe o titular da conta: ");
+				String contaOrigem = teclado.nextLine();
+				System.out.println("informe a conta de destino: ");
+				String contaDestino = teclado.nextLine();
+				contas.fazerTransferencia(contaOrigem, contaDestino, valorTransferencia);
+			
+			case 7:
+				System.out.println("informe o titular da conta ( poupanca ): ");
+				String contaJuros = teclado.nextLine();
+				
+			case 8:
+				System.out.println("obrigado por usar o sistema: ");
+				break;
+				
+				
 			}
+			teclado.close();
 		}
 		
 	}

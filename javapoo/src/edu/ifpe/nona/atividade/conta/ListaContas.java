@@ -33,7 +33,7 @@ public class ListaContas {
 			if(items.cliente.getNome().equalsIgnoreCase(nome)) {
 				return items;
 			}
-		} return null;
+		}return null;
 	}
 	
 	public void fazerDeposito(String nome, double valor) {
