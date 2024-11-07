@@ -54,7 +54,8 @@ public class Menu {
 				System.out.println("Informe o nome do cliente: ");
 				String nomeClientePoupanca = teclado.nextLine();
 				Cliente clientePoupanca = contas.consultarConta(nomeClientePoupanca).getCliente();
-				System.out.println("Taxa de juros: "); double juros = teclado.nextDouble(); 
+				System.out.println("Taxa de juros: ");
+				double juros = teclado.nextDouble(); 
 				teclado.nextLine();  
 				contas.adicionarContaPoupanca(numeroContaPoupanca, saldoContaPoupanca, clientePoupanca, juros); 
 				System.out.println("Poupança criada com sucesso!");
@@ -105,6 +106,7 @@ public class Menu {
 			}
 			
 		}
+		
 	
 	}
 

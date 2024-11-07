@@ -30,7 +30,7 @@ public class ListaContas {
 	
 	public Conta consultarConta(String nome) {
 		for(Conta items: listaContas) {
-			if(items.cliente.getNome().equalsIgnoreCase(nome)) {
+			if(items.getCliente().getNome().equalsIgnoreCase(nome)) {
 				return items;
 			}
 		}return null;

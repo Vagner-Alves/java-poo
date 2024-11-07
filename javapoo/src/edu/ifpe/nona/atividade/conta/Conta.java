@@ -5,7 +5,7 @@ import edu.ifpe.nona.atividade.cliente.Cliente;
 public class Conta {
 	private String numero;
 	private double saldo;
-	Cliente cliente;
+	private Cliente cliente;
 	
 	public Conta() {}
 	
