@@ -78,13 +78,15 @@ public class Menu {
 				
 			case 8:
 				System.out.println("obrigado por usar o sistema: ");
-				break;
+			
+			default:
+				System.out.println("opção invalida , tente novamente.");
 				
 				
 			}
-			teclado.close();
+			
 		}
-		
+	
 	}
 
 }
