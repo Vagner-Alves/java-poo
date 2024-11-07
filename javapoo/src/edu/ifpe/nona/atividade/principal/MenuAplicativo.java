@@ -10,6 +10,8 @@ public class MenuAplicativo {
 		Cliente primeiroCliente = new Cliente("Vagner Alves", "xxx.xxx.xxx-xx");
 		Conta conta = new Conta("1111",0, primeiroCliente);
 		Poupanca contaPoupanca = new Poupanca("333", 10, primeiroCliente,1);
+		ListaContas lista = new ListaContas();
+		
 		
 		conta.consultarSaldo();
 		contaPoupanca.consultarSaldo();
@@ -26,6 +28,9 @@ public class MenuAplicativo {
 		contaPoupanca.transferir(conta, 100);
 		contaPoupanca.consultarSaldo();
 		
+		lista.adicionarCliente("larissa", "yyy.yyy.yyy-xx");
+		Cliente pesquisa = lista.consultarCliente("larissa");
+		System.out.println(pesquisa.getNome());
 	}
 
 }

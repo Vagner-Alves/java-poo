@@ -34,6 +34,7 @@ public class Menu {
 				System.out.println("informe o cpf do cliente: ");
 				String cpf = teclado.nextLine();
 				contas.adicionarCliente(nome, cpf);
+				
 				//contas.consultarConta("vagner alves");
 				break;
 				
@@ -71,9 +72,10 @@ public class Menu {
 				
 			
 			case 5:
-				System.out.println("informe o titular da conta (nome): ");
+				System.out.println("informe o número da conta (nome): ");
 				String consulta = teclado.nextLine();
-				contas.consultarConta(consulta);
+				Conta pesquisa = contas.consultarConta(consulta);
+				System.out.println("Saldo da conta: " + pesquisa.getSaldo());
 				break;
 			
 			case 6:

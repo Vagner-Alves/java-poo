@@ -28,9 +28,17 @@ public class ListaContas {
 		listaContas.add(poupanca);
 	}
 	
-	public Conta consultarConta(String nome) {
+	public Conta consultarConta(String numero) {
 		for(Conta items: listaContas) {
-			if(items.getCliente().getNome().equalsIgnoreCase(nome)) {
+			if(items.getNumero().equalsIgnoreCase(numero)) {
+				return items;
+			}
+		}return null;
+	}
+	
+	public Cliente consultarCliente(String nome) {
+		for(Cliente items: listaClientes) {
+			if(items.getNome().equalsIgnoreCase(nome)) {
 				return items;
 			}
 		}return null;
