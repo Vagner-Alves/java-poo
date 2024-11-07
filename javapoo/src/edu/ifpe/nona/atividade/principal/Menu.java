@@ -26,8 +26,18 @@ public class Menu {
 			switch(opcao) {
 				
 			case 1:
-				
-				
+				System.out.println("informe o nome do cliente: ");
+				String nome = teclado.nextLine();
+				System.out.println("informe o cpf do cliente: ");
+				String cpf = teclado.nextLine();
+				contas.adicionarCliente(nome, cpf);
+				//contas.consultarConta("vagner alves");
+			case 2:
+				System.out.println("informe o número da conta: ");
+				String numeroConta = teclado.nextLine();
+				System.out.println("informe o saldo da conta: ");
+				double saldoConta = teclado.nextDouble();
+				contas.adicionarConta(numeroConta, saldoConta, null);
 			}
 		}
 		

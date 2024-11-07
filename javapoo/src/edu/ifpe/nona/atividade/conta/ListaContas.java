@@ -2,8 +2,8 @@ package edu.ifpe.nona.atividade.conta;
 
 import java.util.ArrayList;
 
-import edu.ifpe.nona.atividade.cliente.Cliente;
 
+import edu.ifpe.nona.atividade.cliente.Cliente;
 public class ListaContas {
 	private ArrayList<Conta> listaContas;
 	private ArrayList<Cliente> listaClientes;
@@ -20,9 +20,12 @@ public class ListaContas {
 	
 	public void adicionarConta(String numero, double saldo, Cliente cliente) {
 		Conta conta = new Conta(numero, saldo, cliente);
-		listaContas.add(conta);
-		
-		
+		listaContas.add(conta);	
+	}
+	
+	public void adicionarContaPoupanca(String numero, double saldo, Cliente cliente, double j) {
+		Poupanca poupanca = new Poupanca(numero, saldo, cliente, j);
+		listaContas.add(poupanca);
 	}
 	
 	public Conta consultarConta(String nome) {
