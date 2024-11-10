@@ -43,7 +43,7 @@ public class Menu {
 				String numeroConta = teclado.nextLine();
 				System.out.println("informe o saldo da conta: ");
 				double saldoConta = teclado.nextDouble();
-				contas.adicionarConta(numeroConta, saldoConta, null);
+				contas.adicionarContaPoupanca(numeroConta, saldoConta, null);
 				break;
 			
 			case 3:
@@ -83,16 +83,17 @@ public class Menu {
 				double valorTransferencia = teclado.nextDouble();
 				System.out.println("informe o titular da conta: ");
 				String contaOrigem = teclado.nextLine();
+				teclado.nextLine();
 				System.out.println("informe a conta de destino: ");
 				String contaDestino = teclado.nextLine();
 				contas.fazerTransferencia(contaOrigem, contaDestino, valorTransferencia);
 				break;
 			
 			case 7:
-				System.out.println("Informe o nome do cliente: "); 
+				System.out.println("Informe o número da conta: "); 
 				String nomeJuros = teclado.nextLine(); 
 				Conta contaJuros = contas.consultarConta(nomeJuros); 
-				if (contaJuros instanceof Poupanca) { ((Poupanca) contaJuros).renderJuros(5); 
+				contaJuros. 
 				System.out.println("Juros rendidos com sucesso!"); }
 				else { System.out.println("Esta conta não é uma poupança."); }
 				

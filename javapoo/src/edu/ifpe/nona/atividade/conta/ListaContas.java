@@ -50,10 +50,10 @@ public class ListaContas {
 		
 	}
 	
-	public void fazerTransferencia(String nome, String contaDestino, double valor) {
-		Conta conta = consultarConta(nome);
+	public void fazerTransferencia(String contaOrigem, String contaDestino, double valorTransferencia) {
+		Conta conta = consultarConta(contaOrigem);
 		Conta destino = consultarConta(contaDestino);
-		conta.transferir(destino, valor);
+		conta.transferir(destino, valorTransferencia);
 	}
 
 }
