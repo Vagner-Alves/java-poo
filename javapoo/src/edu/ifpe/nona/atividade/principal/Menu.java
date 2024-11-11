@@ -62,9 +62,10 @@ public class Menu {
 			case 4:
 				System.out.println("informe o valor a ser depositado: ");
 				double valor = teclado.nextDouble();
-				System.out.println("informa o titular da conta (nome): ");
-				String nomeTitular = teclado.nextLine();
-				contas.fazerDeposito(nomeTitular, valor);
+				teclado.nextLine();
+				System.out.println("informa o número da conta: ");
+				String numConta = teclado.nextLine();
+				contas.fazerDeposito(numConta, valor);
 				break;
 
 

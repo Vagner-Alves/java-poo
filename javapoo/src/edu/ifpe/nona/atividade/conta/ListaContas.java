@@ -54,9 +54,22 @@ public class ListaContas {
 		}return null;
 	}
 	
-	public void fazerDeposito(String nome, double valor) {
-		Conta conta = consultarConta(nome);
-		conta.depositar(valor);
+	public void fazerDeposito(String numero, double valor) {
+		Poupanca conta = consultarContaPoupanca(numero);
+		if (conta != null) {
+			System.out.println("deposito realizado com sucesso!" );
+			conta.depositar(valor);
+		}
+		else {
+			Conta contaCorrente = consultarConta(numero);
+			if (contaCorrente != null) {
+				contaCorrente.depositar(valor);
+			}
+			else {
+				System.out.println("conta não encontrada");
+			}
+		}
+		//conta.depositar(valor);
 		
 	}
 	
