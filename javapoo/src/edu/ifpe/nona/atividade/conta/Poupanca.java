@@ -16,6 +16,7 @@ public class Poupanca extends Conta{
 	public void renderJuros(double valor) {
 		double valorJuros = getSaldo() * ( valor / 100);
 		this.setSaldo(getSaldo() + valorJuros );
+		System.out.println("juros aplicados: " + getSaldo());
 		
 	}
 	public double getJuros() {

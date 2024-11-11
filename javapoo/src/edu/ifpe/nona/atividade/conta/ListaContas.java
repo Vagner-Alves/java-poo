@@ -6,11 +6,13 @@ import java.util.ArrayList;
 import edu.ifpe.nona.atividade.cliente.Cliente;
 public class ListaContas {
 	private ArrayList<Conta> listaContas;
+	private ArrayList<Poupanca> listaPoupanca;
 	private ArrayList<Cliente> listaClientes;
 	
 	public ListaContas() {
 		listaContas = new ArrayList<>();
 		listaClientes = new ArrayList<>();
+		listaPoupanca = new ArrayList<>();
 	}
 	
 	public void adicionarCliente(String nome, String cpf) {
@@ -25,11 +27,19 @@ public class ListaContas {
 	
 	public void adicionarContaPoupanca(String numero, double saldo, Cliente cliente, double j) {
 		Poupanca poupanca = new Poupanca(numero, saldo, cliente, j);
-		listaContas.add(poupanca);
+		listaPoupanca.add(poupanca);
 	}
 	
 	public Conta consultarConta(String numero) {
 		for(Conta items: listaContas) {
+			if(items.getNumero().equalsIgnoreCase(numero)) {
+				return items;
+			}
+		}return null;
+	}
+	
+	public Poupanca consultarContaPoupanca(String numero) {
+		for(Poupanca items: listaPoupanca) {
 			if(items.getNumero().equalsIgnoreCase(numero)) {
 				return items;
 			}
