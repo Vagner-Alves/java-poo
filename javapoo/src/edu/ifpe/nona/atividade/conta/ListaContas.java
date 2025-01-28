@@ -8,28 +8,28 @@ public class ListaContas {
 	private ArrayList<Conta> listaContas;
 	private ArrayList<Poupanca> listaPoupanca;
 	private ArrayList<Cliente> listaClientes;
-	
+
 	public ListaContas() {
 		listaContas = new ArrayList<>();
 		listaClientes = new ArrayList<>();
 		listaPoupanca = new ArrayList<>();
 	}
-	
+
 	public void adicionarCliente(String nome, String cpf) {
 		Cliente cliente = new Cliente(nome, cpf);
 		listaClientes.add(cliente);
 	}
-	
+
 	public void adicionarConta(String numero, double saldo, Cliente cliente) {
 		Conta conta = new Conta(numero, saldo, cliente);
 		listaContas.add(conta);	
 	}
-	
+
 	public void adicionarContaPoupanca(String numero, double saldo, Cliente cliente, double j) {
 		Poupanca poupanca = new Poupanca(numero, saldo, cliente, j);
 		listaPoupanca.add(poupanca);
 	}
-	
+
 	public Conta consultarConta(String numero) {
 		for(Conta items: listaContas) {
 			if(items.getNumero().equalsIgnoreCase(numero)) {
@@ -37,7 +37,7 @@ public class ListaContas {
 			}
 		}return null;
 	}
-	
+
 	public Poupanca consultarContaPoupanca(String numero) {
 		for(Poupanca items: listaPoupanca) {
 			if(items.getNumero().equalsIgnoreCase(numero)) {
@@ -45,7 +45,7 @@ public class ListaContas {
 			}
 		}return null;
 	}
-	
+
 	public Cliente consultarCliente(String nome) {
 		for(Cliente items: listaClientes) {
 			if(items.getNome().equalsIgnoreCase(nome)) {
@@ -53,7 +53,7 @@ public class ListaContas {
 			}
 		}return null;
 	}
-	
+
 	public void fazerDeposito(String numero, double valor) {
 		Poupanca conta = consultarContaPoupanca(numero);
 		if (conta != null) {
@@ -70,13 +70,37 @@ public class ListaContas {
 			}
 		}
 		//conta.depositar(valor);
-		
+
 	}
-	
+
 	public void fazerTransferencia(String contaOrigem, String contaDestino, double valorTransferencia) {
-		Conta conta = consultarConta(contaOrigem);
-		Conta destino = consultarConta(contaDestino);
-		conta.transferir(destino, valorTransferencia);
+	    Conta conta = consultarConta(contaOrigem);
+	    Conta destino = consultarConta(contaDestino);
+
+	    if (conta != null && destino != null) {
+	        // Transfer between regular accounts
+	        if (conta.transferir(destino, valorTransferencia)) {
+	            System.out.println("Transferência realizada com sucesso!");
+	        } else {
+	            System.out.println("Saldo insuficiente para transferência.");
+	        }
+	    } else {
+	        // If either conta or destino is null, check for Poupanca type
+	        Poupanca contaP = consultarContaPoupanca(contaOrigem);
+	        Poupanca destinoP = consultarContaPoupanca(contaDestino);
+
+	        if (contaP != null && destinoP != null) {
+	            // Transfer between savings accounts
+	            if (contaP.transferir(destinoP, valorTransferencia)) {
+	                System.out.println("Transferência realizada com sucesso!");
+	            } else {
+	                System.out.println("Saldo insuficiente para transferência.");
+	            }
+	        } else {
+	            System.out.println("Conta origem ou destino não encontrada.");
+	        }
+	    }
 	}
+
 
 }

@@ -109,7 +109,7 @@ public class Menu {
 					String numeroPoupanca = teclado.nextLine();
 					Poupanca contaPoupancaP = contas.consultarContaPoupanca(numeroPoupanca);
 					System.out.println("Juros rendidos com sucesso!" + contaPoupancaP.getJuros()); 
-
+					break;
 
 				case 8:
 					System.out.println("obrigado por usar o sistema: ");

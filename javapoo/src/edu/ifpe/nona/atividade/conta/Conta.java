@@ -22,13 +22,16 @@ public class Conta {
 	}
 	
 	public void depositar(double valor) {
-		double novoSaldo = saldo + valor;
-		this.saldo = novoSaldo;
+		this.saldo += valor;
 	}
 	
-	public void transferir(Conta contaDestino,double valor) {
-		this.saldo = saldo - valor;
-		contaDestino.depositar(valor);
+	public boolean transferir(Conta destino, double valor) {
+	    if (this.saldo >= valor) {
+	        this.saldo -= valor;
+	        destino.depositar(valor);
+	        return true;
+	    }
+	    return false;
 	}
 	
 	public String getNumero() {
